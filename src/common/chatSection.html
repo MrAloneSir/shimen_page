@@ -1,0 +1,87 @@
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_5163602_bvwwtki974.css">
+<style>
+  .wechat-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+    z-index: 10001;
+  }
+
+  .modal-content {
+    width: fit-content;
+    min-width: 40%;
+    background: #fff;
+    padding: 40px;
+    border-radius: 8px;
+    text-align: center;
+    position: relative;
+  }
+
+  .close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 20px;
+    cursor: pointer;
+    color: #666;
+  }
+
+  .qrcode-img {
+    width: 200px;
+    height: 200px;
+    margin: 15px 0;
+  }
+</style>
+<!-- 聊天工具 -->
+<div class="chat-buttons"
+  style="display: flex; gap: 12px; margin: 20px 0; flex-wrap: wrap; justify-content: center; margin-bottom: 2rem;">
+  <!-- 微信 -->
+  <a href="javascript:void(0);" onclick="openWechatModal()"
+    style="display: inline-flex; align-items: center; gap: 6px; padding: 10px 16px; background: #07C160; color: #fff; border-radius: 6px; text-decoration: none; font-size: 14px;">
+    <i class="iconfont icon-smweixin"></i> wechat
+  </a>
+
+  <!-- WhatsApp -->
+  <a href="https://wa.me/8615634485520" target="_blank"
+    style="display: inline-flex; align-items: center; gap: 6px; padding: 10px 16px; background: #25D366; color: #fff; border-radius: 6px; text-decoration: none; font-size: 14px;">
+    <i class="iconfont icon-smwhatsapp"></i> WhatsApp
+  </a>
+
+  <!-- Facebook Messenger -->
+  <a href="https://m.me/hongfei245" target="_blank"
+    style="display: inline-flex; align-items: center; gap: 6px; padding: 10px 16px; background: #0084FF; color: #fff; border-radius: 6px; text-decoration: none; font-size: 14px;">
+    <i class="iconfont icon-smfacebook"></i> Messenger
+  </a>
+</div>
+
+<!-- 弹窗 -->
+<div class="wechat-modal" id="wechatModal">
+  <div class="modal-content">
+    <span class="close-btn" onclick="closeWechatModal()">×</span>
+    <h3>扫码加微信</h3>
+    <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">
+      <img src="./common/images/qrcode2.jpg" alt="微信二维码" class="qrcode-img">
+      <!-- <img src="./common/images/qrcode1.png" alt="微信二维码" class="qrcode-img"> -->
+    </div>
+    <p>微信扫码联系我</p>
+  </div>
+</div>
+<script>
+  function openWechatModal() {
+    document.getElementById('wechatModal').style.display = 'flex';
+  }
+  function closeWechatModal() {
+    document.getElementById('wechatModal').style.display = 'none';
+  }
+  // 点击弹窗外层关闭
+  window.onclick = function (e) {
+    const modal = document.getElementById('wechatModal');
+    if (e.target === modal) modal.style.display = 'none';
+  }
+</script>

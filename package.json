@@ -1,0 +1,13 @@
+{
+  "name": "shimen-trading",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "gulp",
+    "build": "gulp build"
+  },
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-file-include": "^2.3.0",
+    "gulp-webserver": "^0.9.1"
+  }
+}

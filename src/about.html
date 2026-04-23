@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us - Shimen</title>
+  <!-- 核心图标（所有电脑浏览器） -->
+  <link rel="icon" href="./common/images/icon.png" sizes="any">
+  <!-- PNG 高清图标 -->
+  <link rel="icon" href="./common/images/icon.png" sizes="32x32" type="image/png">
+  <!-- 苹果设备（iPhone/iPad） -->
+  <link rel="apple-touch-icon" href="./common/images/icon.png">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="./common/style.css">
+</head>
+
+<body>
+  @@include('./common/nav.html')
+  <div id="page-content">
+    <div class="banner" style="background-image:url(./common/images/compony.png)">
+      <div class="banner-text">
+        <h1 key="corporatePhilosophy" style="line-height: 1.6; white-space: nowrap;"></h1>
+      </div>
+    </div>
+
+    <section class="section">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-3 mb-4">
+            <div class="list-group sticky-top" style="top: 200px; cursor: pointer;">
+              <a class="list-group-item active" data-target="companyInfo" key="componyInfo"></a>
+              <a class="list-group-item" data-target="newsInfo" key="newsState"></a>
+              <a class="list-group-item" data-target="cultureInfo" key="componyCulture"></a>
+              <!-- <a class="list-group-item" data-target="productInfo" key="producePower"></a> -->
+            </div>
+          </div>
+          <div class="col-lg-9">
+            <div class="about-container">
+              <!-- 左侧图片 -->
+              <!-- <div class="about-img">
+              <img src="./common/images/compony.png" alt="山东世门国际贸易有限公司">
+            </div> -->
+
+              <!-- 右侧简介内容 -->
+              <div class="about-content" style="min-height: 800px;">
+                <!-- 中文 -->
+                <div class="about-desc text-content active" key="companyInfo"></div>
+                <div class="about-desc text-content" key="newsInfo">
+                  <div class="news-list">
+                    <div class="news-item">
+                      <div style="height: 34vh; margin-bottom: 16px; overflow: hidden; border-radius: 10px;">
+                        <image src="./common/images/newinfo.png" alt="新闻图片"></image>
+                      </div>
+                      <h3 key="newInfo1"></h3>
+                      <p style="text-align: right;" key="newInfo2"></p>
+                      <div key="newInfo"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="about-desc text-content" key="cultureInfo">
+                  <div key="cultureInfoCont"></div>
+                  <h3 key="tuanjian"></h3>
+                  <image src="./common/images/cul1.png" alt="企业文化图片"
+                    style="width: 100%; object-fit: cover; margin-bottom: 16px; border-radius: 10px;"></image>
+                  <image src="./common/images/cul2.png" alt="企业文化图片"
+                    style="width: 100%; object-fit: cover; margin-bottom: 16px; border-radius: 10px;"></image>
+                  <image src="./common/images/cul3.png" alt="企业文化图片"
+                    style="width: 100%; object-fit: cover; margin-bottom: 16px; border-radius: 10px;"></image>
+                  <image src="./common/images/cul4.png" alt="企业文化图片"
+                    style="width: 100%; object-fit: cover; margin-bottom: 16px; border-radius: 10px;"></image>
+                </div>
+                <div class="about-desc text-content" key="productInfo">
+                  <section class="production-section">
+                    <!-- 视频区域（最上方） -->
+                    <div class="pro-video-wrapper">
+                      <!-- TODO -->
+                      <!-- <video class="pro-video" controls poster="cover.jpg">
+                      <source src="production.mp4" type="video/mp4">
+                      您的浏览器不支持视频播放
+                    </video> -->
+                    </div>
+
+                    <!-- TODO -->
+                    <!-- 图片九宫格 -->
+                    <!-- <div class="pro-grid">
+                    <img src="factory.jpg" alt="工厂全景">
+                    <img src="workshop.jpg" alt="车间全景">
+                    <img src="equipment.jpg" alt="生产设备">
+                    <img src="process.jpg" alt="生产流程">
+
+                    <img src="qc.jpg" alt="质量检测">
+                    <img src="rd.jpg" alt="研发设计">
+                    <img src="material.jpg" alt="原料配件">
+                    <img src="warehouse.jpg" alt="仓库出货">
+
+                    <img src="cert.jpg" alt="资质证书">
+                  </div> -->
+                  </section>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  @@include('./common/footer.html')
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="./common/data.js"></script>
+  <script src="./common/constant.js"></script>
+  <script src="./common/lang.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,138 @@
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_5163602_bvwwtki974.css">
+<style>
+  /* 底部通用样式 */
+  .footer-wrap {
+    background: #eee;
+    padding: 40px 20px;
+    color: #333;
+    font-size: 14px;
+  }
+
+  .footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr auto;
+    gap: 30px;
+    align-items: start;
+  }
+
+  .footer-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+
+  .footer-logo-icon {
+    width: 40px;
+  }
+
+  .footer-info p {
+    margin: 6px 0;
+    line-height: 1.6;
+  }
+
+  .footer-links ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .footer-links ul li {
+    margin: 10px 0;
+  }
+
+  .footer-links ul li a {
+    color: #333;
+    text-decoration: none;
+  }
+
+  .footer-links ul li a:hover {
+    color: var(--main);
+  }
+
+  .footer-contact .contact-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 10px 0;
+  }
+
+
+  .footer-qrcode img {
+    width: 120px;
+    height: 120px;
+    display: block;
+  }
+
+  /* 移动端适配 */
+  @media (max-width: 768px) {
+    .footer-container {
+      grid-template-columns: 1fr;
+      gap: 30px;
+      text-align: center;
+    }
+
+    .footer-logo {
+      justify-content: center;
+    }
+
+    .footer-contact .contact-item {
+      justify-content: center;
+    }
+
+    .footer-qrcode {
+      display: flex;
+      justify-content: center;
+    }
+  }
+</style>
+
+<footer class="footer-wrap">
+  <div class="footer-logo" style="max-width: 1200px;margin: 0 auto;">
+    <div class="footer-logo-icon">
+      <image src="./common/images/logo.jpg" alt="SHIMEN Logo"></image>
+    </div>
+    <span key="componyName"></span>
+  </div>
+  <div class="footer-container">
+    <div class="footer-info">
+      <p key="address"></p>
+      <p key="yingyezhizhao"></p>
+    </div>
+
+    <!-- 中间：链接列表 -->
+    <div class="footer-links">
+      <ul>
+        <li><a href="./about.html" key="aboutShimen"></a></li>
+        <!-- <li><a href="#" key="privacyPolicy"></a></li> -->
+        <li><a href="./contact.html" key="contactUs"></a></li>
+        <li><a href="./contact.html" key="helpCenter"></a></li>
+      </ul>
+    </div>
+
+    <!-- 右侧：联系方式 -->
+    <div class="footer-contact">
+      <div class="contact-item" style="margin-top: 0px;">
+        <i class="iconfont icon-smwhatsapp" style="color: #999; font-size: 1.5rem;"></i>
+        <span>+86 15634485520</span>
+      </div>
+      <div class="contact-item">
+        <i class="iconfont icon-smwhatsapp" style="color: #999; font-size: 1.5rem;"></i>
+        <span>+86 15315373122</span>
+      </div>
+      <div class="contact-item">
+        <i class="iconfont icon-smemail" style="color: #999; font-size: 1.5rem;"></i>
+        <span>shimenintl@gmail.com</span>
+      </div>
+    </div>
+
+    <!-- 最右侧：二维码 -->
+    <div class="footer-qrcode">
+      <img src="./common/images/qrcode2.jpg" alt="联系我们二维码">
+    </div>
+  </div>
+</footer>
