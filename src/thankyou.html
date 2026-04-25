@@ -5,6 +5,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Submission Successful</title>
+  <!-- 核心图标（所有电脑浏览器） -->
+  <link rel="icon" href="./common/images/icon.png" sizes="any">
+  <!-- PNG 高清图标 -->
+  <link rel="icon" href="./common/images/icon.png" sizes="32x32" type="image/png">
+  <!-- 苹果设备（iPhone/iPad） -->
+  <link rel="apple-touch-icon" href="./common/images/icon.png">
   <style>
     * {
       margin: 0;
@@ -72,11 +78,33 @@
 
   <div class="success-box">
     <div class="icon">✅</div>
-    <h1>Submitted Successfully</h1>
-    <p>Your message has been sent successfully. We will contact you as soon as possible.</p>
-    <a href="index.html" class="btn">Return to Home</a>
+    <h1 key="commitSucc"></h1>
+    <p key="commitSuccDesc"></p>
+    <a href="index.html" class="btn" key="commitSuccBtn"></a>
   </div>
 
 </body>
 
 </html>
+<script src="./common/constant.js"></script>
+<script src="./common/data.js"></script>
+<script>
+  currentLang = localStorage.getItem("lang") || "zh";
+
+  const elements = document.querySelectorAll("[key]");
+  elements.forEach((e) => {
+    const key = e.getAttribute("key");
+    if (lang[currentLang][key]) setHtmlWithoutFlash(e, lang[currentLang][key]);
+  });
+
+  function setHtmlWithoutFlash(el, html) {
+    if (!hasHtmlTags(html)) el.textContent = html;
+    const temp = document.createElement("div");
+    temp.innerHTML = html;
+    el.replaceChildren(...temp.childNodes);
+  }
+  function hasHtmlTags(str) {
+    const doc = new DOMParser().parseFromString(str, "text/html");
+    return Array.from(doc.body.childNodes).some((node) => node.nodeType === 1);
+  }
+</script>

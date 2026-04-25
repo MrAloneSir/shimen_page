@@ -18,6 +18,19 @@
     .container .email-shimen:hover {
       color: var(--main) !important;
     }
+
+    .sendLoading {
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 10000;
+      width: 100vw;
+      height: 100vh;
+      background-color: rgba(0, 0, 0, 0.4);
+      display: none;
+      justify-content: center;
+      align-items: center;
+    }
   </style>
 </head>
 
@@ -56,27 +69,27 @@
           <div class="card shadow border-0 p-4">
             <form id="contactForm" target="_blank">
               <div class="mb-3">
-                <label for="company" class="form-label" key="c1">公司名称</label>
+                <label for="company" class="form-label" key="c1"></label>
                 <input type="text" class="form-control" id="company" name="company" required>
               </div>
               <div class="mb-3">
-                <label for="user_name" class="form-label" key="c2">联系人</label>
+                <label for="user_name" class="form-label" key="c2"></label>
                 <input type="text" class="form-control" id="user_name" name="user_name" required>
               </div>
               <div class="mb-3">
-                <label for="user_phone" class="form-label" key="c3">电话/WhatsApp</label>
+                <label for="user_phone" class="form-label" key="c3"></label>
                 <input type="text" class="form-control" id="user_phone" name="user_phone" required>
               </div>
               <div class="mb-3">
-                <label for="user_email" class="form-label" key="c4">邮箱</label>
+                <label for="user_email" class="form-label" key="c4"></label>
                 <input type="email" class="form-control" id="user_email" name="user_email" required>
               </div>
               <div class="mb-3">
-                <label for="country" class="form-label" key="c5">国家/地区</label>
+                <label for="country" class="form-label" key="c5"></label>
                 <input type="text" class="form-control" id="country" name="country" required>
               </div>
               <div class="mb-3">
-                <label for="demand" class="form-label" key="c6">采购需求</label>
+                <label for="demand" class="form-label" key="c6"></label>
                 <textarea class="form-control" id="demand" name="demand" rows="4"></textarea>
               </div>
 
@@ -88,7 +101,7 @@
               <!-- 挡住机器人发垃圾广告 -->
               <input type="hidden" name="_honeypot" value="">
 
-              <button type="submit" class="btn btn-main w-100" key="submit">提交信息</button>
+              <button type="submit" class="btn btn-main w-100" key="submit"></button>
             </form>
           </div>
         </div>
@@ -98,8 +111,18 @@
     </div>
   </section>
 
+  <!-- 弹窗logo -->
+  <div class="sendLoading" id="sendLoading">
+    <div>
+      <div id="loading-animation" style="width: 15rem;"></div>
+      <p key="sendEmail" style="color: #fff; text-align: center;"></p>
+    </div>
+  </div>
+
   @@include('./common/footer.html')
 
+  <!-- 1. 引入 Lottie 播放器（CDN 永久免费） -->
+  <script src="https://cdn.jsdelivr.net/npm/lottie-web@5/build/player/lottie.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   <script src="./common/data.js"></script>
   <script src="./common/constant.js"></script>
@@ -112,11 +135,11 @@
       form.addEventListener('submit', async function (e) {
         // 必须放在第一行，阻止默认提交
         e.preventDefault();
-
+        const sendLoadingEle = document.getElementById('sendLoading')
         const submitButton = form.querySelector('button[type="submit"]');
         submitButton.disabled = true;
-        submitButton.textContent = "提交中...";
-
+        submitButton.textContent = lang[currentLang].committing;
+        sendLoadingEle.style.display = 'flex';
         try {
           const workerUrl = "https://formsubmit.co/ajax/shimenintl@gmail.com";
           const formData = new FormData(form);
@@ -153,16 +176,27 @@
           }
         } catch (error) {
           console.error('提交错误:', error);
-          alert('提交失败，请稍后重试或直接联系我们。');
+          alert(lang[currentLang].commitFail);
         } finally {
           submitButton.disabled = false;
-          submitButton.textContent = "提交信息";
+          submitButton.textContent = lang[currentLang].submit;
+          sendLoadingEle.style.display = 'none';
         }
       });
     }
     setTimeout(() => {
       submitForm();
     }, 1000);
+
+    document.addEventListener('DOMContentLoaded', function () {
+      lottie.loadAnimation({
+        container: document.getElementById('loading-animation'),
+        renderer: 'svg', // 渲染方式：svg 最清晰
+        loop: true, // 循环播放
+        autoplay: true, // 自动播放
+        path: './common/json/sendEmail.json' // 你的 json 文件路径
+      });
+    });
   </script>
 </body>
 

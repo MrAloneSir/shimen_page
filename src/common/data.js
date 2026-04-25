@@ -118,6 +118,12 @@ const lang = {
     customProductDesc:
       "可定制式草坪修剪机，配备有多功能升级组件。可根据实际需求加装除雪功能、喷施农药功能和承重运输功能，实现一机多用的功能，以满足多样化的作业场景需求",
     contactNow: "立即咨询",
+    sendEmail: "邮件发送中...",
+    committing: "提交中...",
+    commitFail: "提交失败，请稍后重试或直接联系我们。",
+    commitSucc: "提交成功",
+    commitSuccDesc: "您的信息已成功发送，我们会尽快与您联系。",
+    commitSuccBtn: "返回首页",
   },
   en: {
     componyName: "山东世门国际贸易有限公司",
@@ -243,6 +249,14 @@ The products have passed CE, EPA and ISO quality certifications and are exported
     customProductDesc:
       "Customizable lawn mower with multi-functional upgrades. It can be equipped with snow removal function, pesticide spraying function and load-bearing transport function according to actual needs, realizing one machine for multiple purposes to meet diverse operation scenarios.",
     contactNow: "Contact Now",
+    sendEmail: "Sending email...",
+    committing: "Submitting...",
+    commitFail:
+      "Submission failed. Please try again later or contact us directly.",
+    commitSucc: "Submitted Successfully",
+    commitSuccDesc:
+      "Your message has been sent successfully. We will contact you as soon as possible.",
+    commitSuccBtn: "Return to Home",
   },
   es: {
     componyName: "山东世门国际贸易有限公司",
@@ -374,6 +388,14 @@ Los productos han obtenido certificaciones de calidad CE, EPA e ISO y se exporta
     customProductDesc:
       "Cortacésped personalizable con actualizaciones multifuncionales. Se puede equipar con función de eliminación de nieve, función de pulverización de pesticidas y función de transporte con carga según las necesidades reales, logrando una máquina para múltiples usos y adaptándose a diversos escenarios de operación.",
     contactNow: "Contactar ahora",
+    sendEmail: "Enviando correo...",
+    committing: "Enviando...",
+    commitFail:
+      "Envío fallido. Inténtelo de nuevo más tarde o contáctenos directamente.",
+    commitSucc: "Enviado correctamente",
+    commitSuccDesc:
+      "Su mensaje ha sido enviado exitosamente. Nos pondremos en contacto con usted lo antes posible.",
+    commitSuccBtn: "Volver al inicio",
   },
 };
 
