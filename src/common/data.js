@@ -33,7 +33,7 @@ const lang = {
     w2: "终身技术支持",
     w3: "快速配件供应",
     w4: "24小时在线服务",
-    contact_title: "联系我们",
+    contact_title: "在线客服中心",
     c1: "公司名称",
     c2: "联系人",
     c3: "电话/WhatsApp",
@@ -162,7 +162,7 @@ The products have passed CE, EPA and ISO quality certifications and are exported
     w2: "Lifetime Support",
     w3: "Fast Spare Parts",
     w4: "24/7 Online Service",
-    contact_title: "Contact Us",
+    contact_title: "Online Customer Service Center",
     c1: "Company Name",
     c2: "Contact Person",
     c3: "Phone/WhatsApp",
@@ -295,7 +295,7 @@ Los productos han obtenido certificaciones de calidad CE, EPA e ISO y se exporta
     w2: "Soporte Vitalicio",
     w3: "Repuestos Rápidos",
     w4: "Servicio 24/7",
-    contact_title: "Contáctenos",
+    contact_title: "Centro de Atención al Cliente Online",
     c1: "Nombre de la Empresa",
     c2: "Persona de Contacto",
     c3: "Teléfono/WhatsApp",
@@ -839,11 +839,11 @@ const productList = [
   {
     id: "2",
     price: "￥7500",
-    image: "./common/images/224-550a.png",
+    image: "./common/images/224-550a.jpg",
     imageAry: [
       {
         type: "image",
-        url: "./common/images/224-550a.png",
+        url: "./common/images/224-550a.jpg",
       },
       {
         type: "image",
@@ -1294,11 +1294,11 @@ const productList = [
   {
     id: "3",
     price: "￥16800",
-    image: "./common/images/224-550a.png",
+    image: "./common/images/224-550a.jpg",
     imageAry: [
       {
         type: "image",
-        url: "./common/images/224-550a.png",
+        url: "./common/images/224-550a.jpg",
       },
       {
         type: "image",
@@ -1750,11 +1750,11 @@ const productList = [
   {
     id: "4",
     price: "￥21800",
-    image: "./common/images/IMGL4514.png",
+    image: "./common/images/IMGL4514.jpg",
     imageAry: [
       {
         type: "image",
-        url: "./common/images/IMGL4514.png",
+        url: "./common/images/IMGL4514.jpg",
       },
       {
         type: "image",
@@ -2175,11 +2175,11 @@ const productList = [
   {
     id: "5",
     price: "￥29800",
-    image: "./common/images/IMGL4514.png",
+    image: "./common/images/IMGL4514.jpg",
     imageAry: [
       {
         type: "image",
-        url: "./common/images/IMGL4514.png",
+        url: "./common/images/IMGL4514.jpg",
       },
       {
         type: "image",
@@ -2601,27 +2601,27 @@ const productList = [
   {
     id: "6",
     price: "￥23800",
-    image: "./common/images/chaiyou5.png",
+    image: "./common/images/chaiyou5.jpg",
     imageAry: [
       {
         type: "image",
-        url: "./common/images/chaiyou5.png",
+        url: "./common/images/chaiyou5.jpg",
       },
       {
         type: "image",
-        url: "./common/images/chaiyou1.png",
+        url: "./common/images/chaiyou1.jpg",
       },
       {
         type: "image",
-        url: "./common/images/chaiyou2.png",
+        url: "./common/images/chaiyou2.jpg",
       },
       {
         type: "image",
-        url: "./common/images/chaiyou4.png",
+        url: "./common/images/chaiyou4.jpg",
       },
       {
         type: "image",
-        url: "./common/images/chaiyou3.png",
+        url: "./common/images/chaiyou3.jpg",
       },
       {
         type: "video",
@@ -2909,27 +2909,27 @@ const productList = [
   {
     id: "7",
     price: "￥12800",
-    image: "./common/images/chaiyou.png",
+    image: "./common/images/chaiyou.jpg",
     imageAry: [
       {
         type: "image",
-        url: "./common/images/chaiyou.png",
+        url: "./common/images/chaiyou.jpg",
       },
       {
         type: "image",
-        url: "./common/images/chaiyou9.jpeg",
+        url: "./common/images/chaiyou9.jpg",
       },
       {
         type: "image",
-        url: "./common/images/chaiyou6.jpeg",
+        url: "./common/images/chaiyou6.jpg",
       },
       {
         type: "image",
-        url: "./common/images/chaiyou7.jpeg",
+        url: "./common/images/chaiyou7.jpg",
       },
       {
         type: "image",
-        url: "./common/images/chaiyou8.jpeg",
+        url: "./common/images/chaiyou8.jpg",
       },
       {
         type: "video",
