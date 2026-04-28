@@ -34,7 +34,7 @@ function initLang() {
   const text = document.getElementById("langText");
   const elements = document.querySelectorAll("[key]");
   const items = document.querySelectorAll(".lang-item");
-  const saved = localStorage.getItem("lang") || "zh";
+  const saved = localStorage.getItem("lang") || currentLang;
 
   items.forEach((el) => {
     el.onclick = () => {
